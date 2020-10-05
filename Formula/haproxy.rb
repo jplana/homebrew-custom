@@ -18,7 +18,7 @@ class Haproxy < Formula
 
   depends_on "openssl@1.1"
   depends_on "pcre"
-  depends on "lua"
+  depends_on "lua"
 
   def install
     args = %w[
