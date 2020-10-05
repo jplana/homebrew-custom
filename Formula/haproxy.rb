@@ -33,7 +33,7 @@ class Haproxy < Formula
       LUA_LIB_NAME=lua
       ADDLIB=-lcrypto
       LUA_LIB=/usr/local/lib/
-      LUA_INC=/usr/local/include
+      LUA_INC=/usr/local/include/lua
     ]
 
     # We build generic since the Makefile.osx doesn't appear to work
