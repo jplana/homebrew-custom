@@ -22,7 +22,7 @@ class Haproxy < Formula
 
   def install
     args = %w[
-      TARGET=generic
+      TARGET=osx
       USE_KQUEUE=1
       USE_POLL=1
       USE_PCRE=1
@@ -37,8 +37,7 @@ class Haproxy < Formula
     ]
 
     # We build generic since the Makefile.osx doesn't appear to work
-    #system "make", "TARGET=osx", "CC=#{ENV.cc}", "CFLAGS=#{ENV.cflags}", "LDFLAGS=#{ENV.ldflags}", *args
-    system "make", "TARGET=osx", "LDFLAGS=#{ENV.ldflags}", *args
+    system "make", "TARGET=osx", "CC=#{ENV.cc}", "CFLAGS=#{ENV.cflags}", "LDFLAGS=#{ENV.ldflags}", *args
     man1.install "doc/haproxy.1"
     bin.install "haproxy"
   end
